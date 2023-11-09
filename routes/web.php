@@ -20,7 +20,7 @@ Route::get('/sobre-nos', [\App\Http\Controllers\SobreNosController::class, 'sobr
 Route::get('/contato', [\App\Http\Controllers\ContatosController::class, 'contato'])->name('site.contato');
 Route::post('/contato', [\App\Http\Controllers\ContatosController::class, 'salvar'])->name('site.contato');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'autenticar'])->name('site.login');
-Route::get('/login', [\App\Http\Controllers\LoginController::class, 'index'])->name('site.login');
+Route::get('/login/{erro?}', [\App\Http\Controllers\LoginController::class, 'index'])->name('site.login');
 
 // Agrupar rotas
 // app será o prefixo da rota -> http://127.0.0.1:8000/app/login
